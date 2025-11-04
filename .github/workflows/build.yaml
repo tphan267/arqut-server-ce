@@ -43,19 +43,6 @@ jobs:
           go-version: "1.24"
           cache: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24.0.1"
-          cache: "npm"
-          cache-dependency-path: "ui/package-lock.json"
-
-      - name: Build UI
-        working-directory: ./ui
-        run: |
-          npm install
-          npm run build
-
       - name: Build Binary with GoReleaser
         run: |
           set -e
