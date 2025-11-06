@@ -86,7 +86,7 @@ jobs:
         run: |
           # Create a Dockerfile
           cat <<EOF > dist/Dockerfile
-          FROM debian:bullseye-slim
+          FROM alpine:latest
 
           ARG TARGETARCH
           ARG TARGETVARIANT
