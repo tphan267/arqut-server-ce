@@ -6,7 +6,7 @@ before:
     - go mod tidy
 
 builds:
-  - binary: arqut-server-ce
+  - binary: arqut-server
     main: ./cmd/server
     env:
       - CGO_ENABLED=0
@@ -14,7 +14,7 @@ builds:
       - -s -w -X main.Version={{.Version}} -X main.Commit={{.Commit}}
     goos:
       - linux
-      - windows
+      # - windows
     goarch:
       - amd64
       - "386"
