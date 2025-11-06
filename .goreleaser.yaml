@@ -6,7 +6,7 @@ before:
     - go mod tidy
 
 builds:
-  - binary: arqut-server
+  - binary: arqut-server-ce
     main: ./cmd/server
     env:
       - CGO_ENABLED=0
